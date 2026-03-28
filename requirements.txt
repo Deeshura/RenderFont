@@ -1,0 +1,2 @@
+# if they supply chain attack pillow it's so over
+Pillow>=10.0.0
