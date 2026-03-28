@@ -31,21 +31,21 @@ options:
 
 ## Vanilla Files
 
-To run the script, you'll require the char_tables.xml and table-0.png of the vanilla game, respective to whether you're trying to generate a banner or window font. They are not distributed here in this respository- you will need to extract them from kanji_rd.dat or banner.bin using [SkyTemple](https://skytemple.org/).
+To run the script, you'll require the char_tables.xml and table-0.png of the vanilla game, respective to whether you're trying to generate a banner or window font. They are not distributed here in this repository- you will need to extract them from kanji_rd.dat or banner.bin using [SkyTemple](https://skytemple.org/).
 
 To extract these files, open SkyTemple, and open your legally-acquired ROM of PMD EoS. Open the directory titled "Misc. Graphics". In there, you will see both FONT/kanji_rd.dat (which is the sprite files for window text), and FONT/banner.bin:FONT/b_pal.bin (sprite file for banner text).
 
-Double click on the respective file you wish to extract. A preview will open in SkyTemple showing the font in question. Click "Export" above the preview and save the vanilla font to a directory of your choosing. 
+Double-click on the respective file you wish to extract. A preview will open in SkyTemple showing the font in question. Click "Export" above the preview and save the vanilla font to a directory of your choosing. 
 
 ## Usage
 
 1. Download renderfont.py (either by downloading the whole repository or just the script file itself). 
 2. Download Pillow 10.0.0 or above using pip.
 3. Ensure the vanilla char_tables.xml and table-0.png (for window or banner fonts) are in the same directory as renderfont.py, as well as the .ttf font you'd like to render.
-4. Run renderfont.py using python, using the arguements to specify the font you'd like to render, the size you'd like to render it at, the vertical offset of the font (to ensure it lines up properly on the sprite sheet), and if you're rendering a banner font.
+4. Run renderfont.py using python, using the arguements to specify the font you'd like to render, the size you'd like to render it at, the vertical offset of the font (to ensure it lines up properly on the sprite sheet). Use -b if you're rendering a banner font.
 5. renderfont.py will run and output your font file. It may take several attempts to get the font at the correct size and offset.
 6. Once you are happy, copy the generate .png and .xml files into a new directory, and rename them to table-0.png and char_tables.xml. Then copy in the *additional* table-\*.png files that you exported earlier, where the asterisk is 48, 129, 130, 131, 132, 135, and 255.
-7. Open SkyTemple, and open your legally-acquired ROM of PMD EoS. Open the directory titled "Misc. Graphics". In there, you will see both FONT/kanji_rd.dat (which is the sprite files for window text), and FONT/banner.bin:FONT/b_pal.bin (sprite file for banner text). Double click on the respective file you wish to replace. 
+7. Open SkyTemple, and open your legally-acquired ROM of PMD EoS. Open the directory titled "Misc. Graphics". In there, you will see both FONT/kanji_rd.dat (which is the sprite files for window text), and FONT/banner.bin:FONT/b_pal.bin (sprite file for banner text). Double-click on the respective file you wish to replace. 
 8. A preview will open in SkyTemple showing the font in question. Click "Import" above the preview and then navigate to the directory where you moved and renamed your new font file. Open the directory, and SkyTemple will import your new font, which should be reflected in the preview.
 9. Save your ROM and either use the SkyTemple debugger, an emulator, or even real hardware to see your new font in game!
 
